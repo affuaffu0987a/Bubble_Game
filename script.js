@@ -9,8 +9,8 @@ let wrongSound = new Audio('./Audio/Wrong.mp3')
 let gameOver = new Audio('./Audio/gameover.mp3')
 
 function CreateBubble() {
-    for (let index = 0; index <= 160; index++) {
-        let bubbleNumber = Math.floor(Math.random() * 20)
+    for (let index = 0; index <= 120; index++) {
+        let bubbleNumber = Math.floor(Math.random() * 15)
         Bubbles += `<div class="bubble">${bubbleNumber}</div>`
     }
 
@@ -58,7 +58,6 @@ function Scores(){
 
 document.querySelector("#board-bottom").addEventListener("click",(e)=>{
     let ClickOnBubbleNumber = Number(e.target.innerText)
-    console.log(ClickOnBubbleNumber);
     if(ClickOnBubbleNumber === randomHits){
         rightSound.play()
         Scores()
